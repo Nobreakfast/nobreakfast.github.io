@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://nobreakfast.github.io/sitemap.xml
