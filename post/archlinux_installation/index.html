@@ -68,7 +68,7 @@
 <meta itemprop="name" content="Archlinux 安装指南">
 <meta itemprop="description" content="简介 首先，先简单介绍一下 archlinux，archlinux 是一个滚动的 linux 发行版并尽全力提供一个较为稳定的开发环境，它的宗旨是简洁，现代，">
 <meta itemprop="dateModified" content="2020-07-05T20:19:07&#43;08:00" />
-<meta itemprop="wordCount" content="5032">
+<meta itemprop="wordCount" content="5028">
 
 
 
@@ -586,7 +586,7 @@ mount /dev/nvme0n1p1 /mnt/efi
 <pre class="chroma"><code class="language-shell" data-lang="shell">pacstrap /mnt base linux linux-firmware
 </code></pre></td></tr></table>
 </div>
-</div><p>命令后面也可以加上一些个人需要的软件，比如 =vim=。不过问题不大，进入新系统之后依旧可以进行安装。</p>
+</div><p>命令后面也可以加上一些个人需要的软件，比如 <code>vim</code> 。不过问题不大，进入新系统之后依旧可以进行安装。</p>
 <h2 id="配置系统">配置系统</h2>
 <p>其实到这里，我们的系统基本上已经差不多好了，我们需要修改一些文件使得系统可以正常启动，自动挂载磁盘以及本地化的一些操作。</p>
 <h3 id="建立自动挂载">建立自动挂载</h3>
@@ -705,7 +705,7 @@ vim /etc/locale.gen
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">grub-install --target<span class="o">=</span>i386-pc /dev/nvme0n1p1
+<pre class="chroma"><code class="language-shell" data-lang="shell">grub-install --target<span class="o">=</span>i386-pc /dev/nvme0n1
 grub-mkconfig -o /boot/grub/grub.cfg
 </code></pre></td></tr></table>
 </div>

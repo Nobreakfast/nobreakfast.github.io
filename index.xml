@@ -261,7 +261,7 @@ mount /dev/nvme0n1p1 /mnt/efi
 &lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;pacstrap /mnt base linux linux-firmware
 &lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;命令后面也可以加上一些个人需要的软件，比如 =vim=。不过问题不大，进入新系统之后依旧可以进行安装。&lt;/p&gt;
+&lt;/div&gt;&lt;p&gt;命令后面也可以加上一些个人需要的软件，比如 &lt;code&gt;vim&lt;/code&gt; 。不过问题不大，进入新系统之后依旧可以进行安装。&lt;/p&gt;
 &lt;h2 id=&#34;配置系统&#34;&gt;配置系统&lt;/h2&gt;
 &lt;p&gt;其实到这里，我们的系统基本上已经差不多好了，我们需要修改一些文件使得系统可以正常启动，自动挂载磁盘以及本地化的一些操作。&lt;/p&gt;
 &lt;h3 id=&#34;建立自动挂载&#34;&gt;建立自动挂载&lt;/h3&gt;
@@ -380,7 +380,7 @@ vim /etc/locale.gen
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
-&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;grub-install --target&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;i386-pc /dev/nvme0n1p1
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;grub-install --target&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;i386-pc /dev/nvme0n1
 grub-mkconfig -o /boot/grub/grub.cfg
 &lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
