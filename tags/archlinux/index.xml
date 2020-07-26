@@ -6,7 +6,7 @@
     <description>Recent content in archlinux on 不吃早餐 - 技术博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 05 Jul 2020 20:19:07 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 26 Jul 2020 15:03:41 +0800</lastBuildDate>
     
 	<atom:link href="https://nobreakfast.github.io/tags/archlinux/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>Archlinux 安装指南</title>
       <link>https://nobreakfast.github.io/post/archlinux_installation/</link>
-      <pubDate>Sun, 05 Jul 2020 20:19:07 +0800</pubDate>
+      <pubDate>Sun, 26 Jul 2020 15:03:41 +0800</pubDate>
       
       <guid>https://nobreakfast.github.io/post/archlinux_installation/</guid>
       <description>简介 首先，先简单介绍一下 archlinux，archlinux 是一个滚动的 linux 发行版并尽全力提供一个较为稳定的开发环境，它的宗旨是简洁，现代，</description>

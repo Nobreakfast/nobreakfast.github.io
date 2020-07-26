@@ -63,12 +63,12 @@
 <meta property="og:description" content="简介 首先，先简单介绍一下 archlinux，archlinux 是一个滚动的 linux 发行版并尽全力提供一个较为稳定的开发环境，它的宗旨是简洁，现代，" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://nobreakfast.github.io/post/archlinux_installation/" />
-<meta property="article:published_time" content="2020-07-05T20:19:07+08:00" />
-<meta property="article:modified_time" content="2020-07-05T20:19:07+08:00" />
+<meta property="article:published_time" content="2020-07-26T15:03:41+08:00" />
+<meta property="article:modified_time" content="2020-07-26T15:03:41+08:00" />
 <meta itemprop="name" content="Archlinux 安装指南">
 <meta itemprop="description" content="简介 首先，先简单介绍一下 archlinux，archlinux 是一个滚动的 linux 发行版并尽全力提供一个较为稳定的开发环境，它的宗旨是简洁，现代，">
-<meta itemprop="dateModified" content="2020-07-05T20:19:07&#43;08:00" />
-<meta itemprop="wordCount" content="5028">
+<meta itemprop="dateModified" content="2020-07-26T15:03:41&#43;08:00" />
+<meta itemprop="wordCount" content="5005">
 
 
 
@@ -279,8 +279,8 @@
       <h1 class="post-title">Archlinux 安装指南</h1>
       
       <div class="post-meta">
-        <time datetime="2020-07-05" class="post-time">
-          2020-07-05
+        <time datetime="2020-07-26" class="post-time">
+          2020-07-26
         </time>
         <div class="post-category">
             <a href="https://nobreakfast.github.io/categories/archlinux/"> archlinux </a>
@@ -346,9 +346,7 @@
       <h2 id="简介">简介</h2>
 <p>首先，先简单介绍一下 archlinux，archlinux 是一个滚动的 linux 发行版并尽全力提供一个较为稳定的开发环境，它的宗旨是简洁，现代，实用并以用户为中心。archlinux 拥有丰富的软件源，并且有一个较为完善的<a href="https://wiki.archlinux.org/">wiki</a>网页为大家提供丰富的帮助与说明，不论你是否使用 archlinux 发行版，遇到软件问题，看看 archwiki 总没有错。因为我个人比较喜欢 archlinux 这种简洁的风格，并且我真正意义地入门 linux 就是从安装 archlinux 开始的，我希望有更多的小伙伴加入 archlinux。这篇文章将会带领大家一步一步地安装 archlinux 这个发行版。</p>
 <h2 id="准备工作">准备工作</h2>
-<p>首先，先从 archlinux 的下载界面下载最新版的<a href="https://www.archlinux.org/download/">镜像</a>，然后使用自己喜欢的镜像烧录软件进行烧录，这边我推荐使用<a href="http://rufus.ie/">rufus</a>，然后选择 dd 模式烧录 u 盘。在 windows 的磁盘管理界面分出来几十 GB 的容量用来装 linux。如果你要全部用于 linux，那就不需要了。
-然后进入主板 bios 界面，关掉安全启动和快速启动，因为安全启动限制了你安装的系统为 windows。最后，u盘启动电脑。一般来说，如果你打开了主板传统启动模式，你的 u 盘会显示 uefi 和 legacy 两种模式，随便选择一种，推荐 uefi。如果你主板设置只开启了 uefi，那么你只能看到 uefi。
-之后，看到 grub 界面，上下键选择 Boot Arch Linux，然后按 enter 回车。 然后等待一段时间，就可以看到 archlinux 的 livecd 界面了。</p>
+<p>首先，先从 archlinux 的下载界面下载最新版的<a href="https://www.archlinux.org/download/">镜像</a>，然后使用自己喜欢的镜像烧录软件进行烧录，这边我推荐使用<a href="http://rufus.ie/">rufus</a>，然后选择 dd 模式烧录 u 盘。在 windows 的磁盘管理界面分出来几十 GB 的容量用来装 linux。如果你要全部用于 linux，那就不需要了。然后进入主板 bios 界面，关掉安全启动和快速启动，因为安全启动限制了你安装的系统为 windows。最后，u盘启动电脑。一般来说，如果你打开了主板传统启动模式，你的 u 盘会显示 uefi 和 legacy 两种模式，随便选择一种，推荐 uefi。如果你主板设置只开启了 uefi，那么你只能看到 uefi。之后，看到 grub 界面，上下键选择 Boot Arch Linux，然后按 enter 回车。 然后等待一段时间，就可以看到 archlinux 的 livecd 界面了。</p>
 <h2 id="安装">安装</h2>
 <h3 id="验证启动模式">验证启动模式</h3>
 <p>首先，我们需要再确认一下自己选择的是 <code>uefi</code> 还是 <code>legacy bios</code> 。</p>
@@ -373,17 +371,18 @@
 </code></pre></td></tr></table>
 </div>
 </div><h4 id="无线连接">无线连接</h4>
-<p>直接运行</p>
+<p>因为最新的 livecd 已经不包含 <code>wifi-menu</code> 了，所以这里就使用 <code>nmcli</code> 然后根据指示，选择对应的 wifi 帐号和密码就行了。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">wifi-menu
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">nmcli dev wifi list
+nmcli device wifi connect &#34;wifi名称&#34; password ”wifi密码“
 </code></pre></td></tr></table>
 </div>
-</div><p>然后根据指示，选择对应的 wifi 帐号和密码就行了。</p>
-<h4 id="测试网络连接">测试网络连接</h4>
+</div><h4 id="测试网络连接">测试网络连接</h4>
 <p>然后测试一下网络连接</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -435,7 +434,7 @@
 <tbody>
 <tr>
 <td>/dev/nvme0n1p1</td>
-<td>/efi</td>
+<td>/boot/efi</td>
 <td>512 MiB</td>
 </tr>
 <tr>
@@ -710,7 +709,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 </code></pre></td></tr></table>
 </div>
 </div><h4 id="uefi">uefi</h4>
-<p>如果你挂载的启动目录是 <code>/boot/efi</code> ，这里的 <code>efi</code> 就修改成 <code>/boot/efi</code> 。最后面的 <code>GRUB</code> ，你可以修改成你喜欢的名字。</p>
+<p>最后面的 <code>GRUB</code> ，你可以修改成你喜欢的名字。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -719,7 +718,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-shell" data-lang="shell">pacman -S efibootmgr
-grub-install --target<span class="o">=</span>x86_64-efi --efi-directory<span class="o">=</span>efi --bootloader-id<span class="o">=</span>GRUB
+grub-install --target<span class="o">=</span>x86_64-efi --efi-directory<span class="o">=</span>/boot/efi --bootloader-id<span class="o">=</span>GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
 </code></pre></td></tr></table>
 </div>
@@ -766,7 +765,7 @@ reboot
 </div>
 </div></li>
 <li>
-<p>wifi-menu 无法联网</p>
+<p><code>nmcli</code></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -794,8 +793,7 @@ reboot
 passwd username
 </code></pre></td></tr></table>
 </div>
-</div><p><code>username</code> 可以替换为你想要的名字。这个就是你以后要输入的用户名和密码。
-设置用户的 <code>权限</code> ：</p>
+</div><p><code>username</code> 可以替换为你想要的名字。这个就是你以后要输入的用户名和密码。设置用户的 <code>权限</code> ：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -808,7 +806,7 @@ ln -s /usr/bin/vim /usr/bin/vi
 visudo
 </code></pre></td></tr></table>
 </div>
-</div><p>这里第一行我们把默认使用的 <code>vi</code> 变换为 =vim=，虽然都差不多，但对于新手来说，容易出错。接下来，我们找到：</p>
+</div><p>这里第一行我们把默认使用的 <code>vi</code> 变换为 <code>vim</code> ，虽然都差不多，但对于新手来说，容易出错。接下来，我们找到：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -852,8 +850,7 @@ sudo pacman -S somepackages
 </li>
 <li>
 <p>添加 <code>archlinuxcn</code> 源
-<code>archlinux</code> 和其他发行版的一个区别就是，它提供了丰富的社区软件仓库 <code>AUR</code> ，但是，对于新手来说，使用 <code>AUR</code> 可能会对系统造成损伤。因为它需要下载源代码，然后进行编译，打包，最后进行安装。所以，社区为了大家方便，有人定期维护这些操作，并把打包好的软件放在 <code>archlinuxcn</code> 之类的仓库里，比如网易云音乐，qq，谷歌浏览器等。
-在这里，使用 <code>vim</code> 打开 <code>/etc/pacman.conf</code> :</p>
+<code>archlinux</code> 和其他发行版的一个区别就是，它提供了丰富的社区软件仓库 <code>AUR</code> ，但是，对于新手来说，使用 <code>AUR</code> 可能会对系统造成损伤。因为它需要下载源代码，然后进行编译，打包，最后进行安装。所以，社区为了大家方便，有人定期维护这些操作，并把打包好的软件放在 <code>archlinuxcn</code> 之类的仓库里，比如网易云音乐，qq，谷歌浏览器等。在这里，使用 <code>vim</code> 打开 <code>/etc/pacman.conf</code> :</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -870,7 +867,7 @@ sudo pacman -S somepackages
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-shell" data-lang="shell">  <span class="o">[</span>archlinuxcn<span class="o">]</span>
-  <span class="nv">Server</span> <span class="o">=</span> https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/<span class="nv">$arch</span>
+  <span class="nv">Server</span> <span class="o">=</span> http://mirrors.163.com/archlinux-cn/<span class="nv">$arch</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>然后安装 <code>archlinuxcn-keyring</code> 获取验证信息：</p>
@@ -887,7 +884,7 @@ sudo pacman -S somepackages
 <h3 id="安装图形界面">安装图形界面</h3>
 <p>如果不安装图形界面，你的系统就会是这种纯命令行的环境，如果不是高玩，请安装图形界面。</p>
 <h4 id="显示服务">显示服务</h4>
-<p>这里选择只有 <code>xorg</code> 或者 <code>wayland</code> ，具体区别，可以自行百度一下，这里推荐使用 =xorg=。</p>
+<p>这里选择只有 <code>xorg</code> 或者 <code>wayland</code> ，具体区别，可以自行百度一下，这里推荐使用 <code>xorg</code> 。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -1136,7 +1133,7 @@ yay -S netease-cloud-music
 </div></li>
 </ul>
 <h2 id="总结">总结</h2>
-<p>这是我的第一篇博客，可能内容写的不够详细，或者太罗嗦，希望大家见谅。如果有不清楚的地方，或者出问题的地方，或者感兴趣的地方，请大家在下方留言，我会在之后的博客里进行讲解。我计划在后面先出一篇vim的使用教程再出一篇emacs的使用教程，敬请期待。如果我回复不及时，请发邮(<a href="mailto:zcl.neber@hotmail.com">zcl.neber@hotmail.com</a>)给我，感谢!</p>
+<p>这是我的第一篇博客，可能内容写的不够详细，或者太罗嗦，希望大家见谅。如果有不清楚的地方，或者出问题的地方，或者感兴趣的地方，请大家在下方留言，我会在之后的博客里进行讲解。如果我回复不及时，请发邮(<a href="mailto:zcl.neber@hotmail.com">zcl.neber@hotmail.com</a>)给我，感谢。</p>
 
     </div>
 
@@ -1150,7 +1147,7 @@ yay -S netease-cloud-music
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
     <span class="item-content">
-      2020-07-05
+      2020-07-26
       
     </span>
   </p>
